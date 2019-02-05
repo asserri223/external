@@ -1,5 +1,3 @@
-sudo: required
-dist: trusty
 language: cpp
 
 cache:
@@ -22,22 +20,14 @@ addons:
 
 matrix:
   include:
-    - compiler: clang
+    - os: linux
+      dist: trusty
+      sudo: required
       env:
         - COMPILER_CC=clang
         - COMPILER_CXX=clang++
         - BUILD_NAME=clang
-    - compiler: gcc
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-5
-      env:
-        - COMPILER_CC=gcc-5
-        - COMPILER_CXX=g++-5
-        - BUILD_NAME=gcc5
+    - os: windows
 
 before_install:
   - export ROOT_DIR=`pwd`
