@@ -154,3 +154,8 @@ ExternalProject_Get_Property(jsonbox-ex INSTALL_DIR)
 
 INSTALL(DIRECTORY ${INSTALL_DIR}/lib DESTINATION jsonbox)
 INSTALL(DIRECTORY ${INSTALL_DIR}/include DESTINATION jsonbox)
+
+ExternalProject_Get_Property(yaml-cpp-lib INSTALL_DIR)
+
+INSTALL(DIRECTORY ${INSTALL_DIR}/lib DESTINATION yaml-cpp)
+INSTALL(DIRECTORY ${INSTALL_DIR}/include DESTINATION yaml-cpp)
