@@ -269,8 +269,8 @@ ELSEIF(GIT_DEPENDENCIES)
     )
 ELSE()
     SET(MARIADB_URL
-        URL https://github.com/comphack/mariadb/archive/comp_hack-20190603.zip
-        URL_HASH SHA1=4e93b6dfe3872223becf0d3ebf27aadf9aa05e17
+        URL https://github.com/comphack/mariadb/archive/comp_hack-20220723.zip
+        URL_HASH SHA1=01167c8b54763c27df025dae49c057624175ffe8
     )
 ENDIF()
 
