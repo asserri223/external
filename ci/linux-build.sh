@@ -3,6 +3,12 @@ set -ex
 
 export ROOT_DIR=$(pwd)
 
+if [ "${COMPILER}" == "clang" ]; then
+    export LIBCXX_PACKAGES="libc++-11-dev libc++abi-11-dev"
+    sudo apt-get update -q
+    sudo apt-get install ${LIBCXX_PACKAGES} -y
+fi
+
 if [ "${GENERATOR}" == "Ninja" ]; then
     sudo apt-get update -q
     sudo apt-get install ninja-build -y
